@@ -65,11 +65,7 @@ module exterior(l,tp,tl,d,pd,pl,cl) {
 }
 
 module plug(h,d,ld,cl) {
-    echo(h,d,ld,cl);
-    frac = (d/2)/ld;
-    echo(frac);
-    gr = h * frac + ld/2;
-    echo(gr);
+    gr = h * (d/2)/ld + ld/2;
     rotate([90,0,0]) {
         intersection() {
             cylinder(h=h,d=d);
